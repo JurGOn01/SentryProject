@@ -313,6 +313,22 @@
     [
       "19218b91-eb91-4e1c-885c-1d9adbea2484",
       "Water Gun Schematic"
+    ],
+    [
+      "bd98985b-4b64-440d-a314-a9e411699bd6",
+      "PositionOfComponents"
+    ],
+    [
+      "c20a96f1-4f7c-4f74-a881-bf0ee2229369",
+      "Buck - 12v to 6V1"
+    ],
+    [
+      "f7117cba-d1f6-432d-ae22-d4ce07d85c40",
+      "Buck - 12v to 5V1"
+    ],
+    [
+      "b0f15337-8a95-45a8-9064-faa415eef808",
+      "Relay Module1"
     ]
   ],
   "text_variables": {}
