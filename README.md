@@ -85,4 +85,5 @@ lithium battery charging - https://batteryuniversity.com/article/bu-409-charging
 
 ##List of components
 
-
+Software:
+Good intro to unit testing with platform.io (unity framework) - https://www.youtube.com/watch?v=KPesyRp8qqo
