@@ -1,0 +1,3 @@
+[submodule "1 Software/MCU_SentryGun/lib/Servo"]
+	path = 1 Software/MCU_SentryGun/lib/Servo
+	url = https://github.com/arduino-libraries/Servo.git
