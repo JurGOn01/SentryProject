@@ -44,3 +44,11 @@ libraries scanning project source files.
 
 More information about PlatformIO Library Dependency Finder
 - https://docs.platformio.org/page/librarymanager/ldf.html
+
+
+Adding Arduino libs like Servo
+I have cloned a Arduino lib repo for Sevo and then made it as a submodule.
+This allows for seperate change versioning hisotry + easy when update occurs.
+This can be done with any lib that is from github (or i think any domain as long as its git) 
+
+example: git submodule add https://github.com/arduino-libraries/Servo.git .\lib\Servo
