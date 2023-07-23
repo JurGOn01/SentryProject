@@ -1,20 +1,24 @@
 #include <Arduino.h>
 #include <Servo.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include <avr8-stub.h>
+#include <app_api.h> //only needed with flash breakpoints
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+// Upper and lower value postions for X-axis Servo
+#define MAX_X_POSITION 130
+#define DEFAULT_X_POSITION 0 // TODO
+#define MIN_X_POSITION 0
+
+// Upper and lower value postions for X-axis Servo
+#define MAX_Y_POSITION 0     // TODO
+#define DEFAULT_Y_POSITION 0 // TODO
+#define MIN_Y_POSITION 0     // TODO
+
+void setup()
+{
+  debug_init();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
 }
