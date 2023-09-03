@@ -19,37 +19,68 @@ Servo servo_Y;
 int currPos_X = 0; // X servo current position
 int currPos_Y = 0; // X servo current position
 
+void Xaxis_test();
+void Yaxis_test();
+
 void setup()
 {
   // put your setup code here, to run once:
   debug_init(); // start of debug
-  servo_X.attach(9);
+  servo_X.attach(5);
+  servo_Y.attach(6); // attaching the servos to the PWM channel defined by System Schematic
+  delay(100);        // Electronics energising wait
+
+  servo_X.write(DEFAULT_X_Postion);
+  delay(1000);
+  servo_Y.write(DEFAULT_Y_Postion);
+  delay(1000);
 }
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
-  for (currPos_X = 0; currPos_X <= MAX_X_Postion; currPos_X += 1)
-  { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    servo_X.write(currPos_X); // tell servo to go to position in variable 'pos'
-    delay(15);                // waits 15 ms for the servo to reach the position
-  }
-  for (currPos_X = 180; currPos_X >= MIN_X_Postion; currPos_X -= 1)
-  {                           // goes from 180 degrees to 0 degrees
-    servo_X.write(currPos_X); // tell servo to go to position in variable 'pos'
-    delay(15);                // waits 15 ms for the servo to reach the position
+
+  Xaxis_test();
+  Yaxis_test();
+}
+
+void Xaxis_test()
+{
+  for (currPos_X = DEFAULT_X_Postion; currPos_X <= MAX_X_Postion; currPos_X += 1)
+  {
+    servo_X.write(currPos_X);
+    delay(15);
   }
 
-  for (currPos_Y = 0; currPos_Y <= MAX_Y_Postion; currPos_Y += 1)
-  { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    servo_Y.write(currPos_Y); // tell servo to go to position in variable 'pos'
-    delay(15);                // waits 15 ms for the servo to reach the position
+  for (currPos_X = MAX_X_Postion; currPos_X >= MIN_X_Postion; currPos_X -= 1)
+  {
+    servo_X.write(currPos_X);
+    delay(15);
   }
-  for (currPos_Y = 180; currPos_Y >= MIN_Y_Postion; currPos_Y -= 1)
-  {                           // goes from 180 degrees to 0 degrees
-    servo_Y.write(currPos_Y); // tell servo to go to position in variable 'pos'
-    delay(15);                // waits 15 ms for the servo to reach the position
+
+  for (currPos_X = 0; currPos_X < DEFAULT_X_Postion; currPos_X += 1)
+  {
+    servo_X.write(currPos_X);
+    delay(15);
+  }
+}
+
+void Yaxis_test()
+{
+  for (currPos_Y = DEFAULT_Y_Postion; currPos_Y <= MAX_Y_Postion; currPos_Y += 1)
+  {
+    servo_Y.write(currPos_Y);
+    delay(20);
+  }
+
+  for (currPos_Y = MAX_Y_Postion; currPos_Y >= MIN_Y_Postion; currPos_Y -= 1)
+  {
+    servo_Y.write(currPos_Y);
+    delay(20);
+  }
+
+  for (currPos_Y = 0; currPos_X < DEFAULT_Y_Postion; currPos_Y += 1)
+  {
+    servo_Y.write(currPos_Y);
+    delay(20);
   }
 }
